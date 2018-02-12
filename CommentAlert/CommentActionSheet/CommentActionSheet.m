@@ -143,7 +143,8 @@ static const CGFloat kMoveAnimationDuration = .25f;
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
+    // 如果遇到中断操作（来电...），就移除当前视图
+    [self remove];
 }
 
 
